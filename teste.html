@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="mensagem">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script>
+    angular.module("mensagem", []);
+    angular.module("mensagem").controller("mensagemAngular", 
+    function($scope){
+            $scope.message =  "olá seja bem vindos a nossa aplicação";
+        });
+    
+    </script>
+  </head>
+  <body>
+   
+    <div ng-controller="mensagemAngular">
+        {{message}}
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="CadClientes"   lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
+    
+
+    <script>
+        angular.module("CadClientes", []);
+        angular.module("CadClientes").controller("CadClientesCtrl",
+        function ($scope) {
+            $scope.app="Cadastro de Clientes";
+            $scope.clientes = [
+                {nome:"anailson", codigo:"0001"},
+                {nome:"ila", codigo:"0002"},
+                {nome:"raquel", codigo:"0003"},
+                {nome:"mello", codigo:"0004"},
+            ];
+        });
+        </script>
+    <title>CADASTRO DE CLIENTE</title>
+</head>
+
+<body ng-controller="CadClientesCtrl">
+    <div class="jumbotron"><h4>{{app}}</h4>
+    
+    <table class="table table-striped">
+        <tr>
+            <th><b>Nome</b></th>
+            <th><b>Codigo</b></th>
+        </tr>
+        <tr ng-repeat="cliente in clientes">
+        <td>{{cliente.nome}}</td>
+        <td>{{cliente.codigo}}</td>
+
+        </tr>
+    </table>
+</div>
+    
+</body>
+</html>
